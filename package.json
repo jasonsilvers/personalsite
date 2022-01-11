@@ -8,7 +8,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@octokit/rest": "^18.12.0",
+    "@types/ioredis": "^4.28.7",
+    "esbuild": "^0.14.10",
+    "ioredis": "^4.28.2",
+    "mdx-bundler": "^8.0.1",
     "next": "12.0.7",
+    "octokit": "^1.7.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "styled-components": "^5.3.3"
