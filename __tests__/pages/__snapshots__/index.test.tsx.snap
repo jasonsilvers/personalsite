@@ -18,6 +18,11 @@ exports[`routes the user to the Unauthenticated app 1`] = `
           Next.js!
         </a>
       </h1>
+      <h1
+        class="font-bold text-center text-5xl text-white sm:text-gray-800 md:text-pink-700"
+      >
+        This is Twind!
+      </h1>
       <p
         class="description"
       >
