@@ -27,6 +27,15 @@ npm run check-types ||
     false;
 )
 
+# Check tsconfig standards
+npm run test:commit ||
+(
+    echo '🤡😂❌🤡 Failed Tests. 🤡😂❌🤡
+            Why Why would you push failing code 🤡'
+    false;
+)
+
+
 # If everything passes... Now we can commit
 echo '🤔🤔🤔🤔... Alright... Code looks good to me... Trying to build now. 🤔🤔🤔🤔'
 
