@@ -5,20 +5,15 @@ import type { NextApiRequest, NextApiResponse } from 'next'
 
 import { createClient } from '../../utils/redis.server'
 
-type Data = {
-  name: string
-}
-
 async function handler(req: NextApiRequest, res: NextApiResponse) {
+  const test = process.env.TEST
+
+  Sentry.captureMessage(`test environment variable ---- ${test}`)
   const redisClient = createClient()
 
   redisClient.set('test', 'yourface')
 
   const result = await redisClient.get('test')
-
-  const test = process.env.TEST
-
-  Sentry.captureMessage(`test environment variable ---- ${test}`)
 
   res.status(200).json({ result, test, hello: 'hello' })
 }
