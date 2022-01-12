@@ -12,10 +12,9 @@
     "check-format": "prettier --check .",
     "format": "prettier --write .",
     "prepare": "husky install",
-    "cypress": "cypress open",
-    "cypress:headless": "cypress run",
-    "e2e": "start-server-and-test start http://localhost:3000 cypress",
-    "e2e:headless": "start-server-and-test start http://localhost:3000 cypress:headless"
+    "cypress": "CYPRESS_BASE_URL=http://localhost:3000 cypress open",
+    "cypress:headless": "CYPRESS_BASE_URL=http://localhost:3000 cypress run",
+    "e2e:pipeline": "cypress run"
   },
   "dependencies": {
     "@octokit/rest": "^18.12.0",
@@ -31,6 +30,7 @@
     "twind": "^0.16.16"
   },
   "devDependencies": {
+    "@testing-library/cypress": "^8.0.2",
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
     "@types/node": "17.0.8",
