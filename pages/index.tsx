@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { useEffect, useMemo } from 'react'
 import { mdxSource } from '../components/bundler'
 import styles from '../styles/Home.module.css'
+import { tw } from 'twind'
 
 import { getMDXComponent } from 'mdx-bundler/client'
 
@@ -23,6 +24,9 @@ const Home: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ code, 
       <main className={styles.main}>
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
+        </h1>
+        <h1 className={tw`font-bold text(center 5xl white sm:gray-800 md:pink-700)`}>
+          This is Twind!
         </h1>
 
         <p className={styles.description}>
