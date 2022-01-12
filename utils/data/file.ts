@@ -1,4 +1,1 @@
-export const getFiles = () => {
-
-  
-}
+export const getFiles = () => {}

@@ -9,6 +9,6 @@ description: This is some description
 Here's a **neat** demo:
 
 
-`.trim();
+`.trim()
 
-export { mdxSource };
+export { mdxSource }

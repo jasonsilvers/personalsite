@@ -1,11 +1,12 @@
-import { createGlobalStyle } from 'styled-components';
-import tw, { theme, GlobalStyles as BaseStyles } from 'twin.macro';
+import { createGlobalStyle } from 'styled-components'
+import tw, { theme, GlobalStyles as BaseStyles } from 'twin.macro'
 
-const CustomStyles = createGlobalStyle({ // < Object styles
+const CustomStyles = createGlobalStyle({
+  // < Object styles
   body: {
     WebkitTapHighlightColor: theme`colors.purple.500`,
-    ...tw`antialiased`,
-  },
+    ...tw`antialiased`
+  }
 })
 
 const GlobalStyles = () => (
@@ -13,4 +14,4 @@ const GlobalStyles = () => (
     <BaseStyles />
     <CustomStyles />
   </>
-);
+)
