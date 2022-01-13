@@ -33,8 +33,14 @@ yarn-error.log*
 # vercel
 .vercel
 
+#Redis
+.cache
+.cache/redis/
+.cache/redis/dump.rdb
+
 # typescript
 *.tsbuildinfo
 
 # Sentry
 .sentryclirc
+
