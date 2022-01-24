@@ -1,4 +1,4 @@
-name: Deploy personal site
+name: Deploy personal site to staging
 
 on:
   push:
