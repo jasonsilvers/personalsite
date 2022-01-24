@@ -1,6 +1,11 @@
 name: Deploy personal site
 
-on: [push, pull_request]
+on:
+  push:
+    branches:
+      - 'feat/**'
+      - 'fix/**'
+      - 'chore/**'
 
 jobs:
   vercel:
@@ -50,14 +55,3 @@ jobs:
         env:
           CYPRESS_BASE_URL: ${{ steps.deploy-vercel-staging.outputs.preview-url }}
         run: npm run e2e:pipeline
-
-      - name: Deploy to Production
-        id: deploy-vercel-production
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-        uses: amondnet/vercel-action@v20
-        with:
-          vercel-token: ${{ secrets.VERCEL_TOKEN }}
-          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
-          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
-          vercel-args: '--prod'
-          scope: ${{ secrets.VERCEL_ORG_ID }}
