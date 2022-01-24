@@ -17,8 +17,15 @@ const customJestConfig = {
     '<rootDir>/.next/',
     '<rootDir>/node_modules/',
     '<rootDir>/__tests__/utils/',
-    '<rootDir>/__tests__/jest.setup.js'
-  ]
+    '<rootDir>/__tests__/jest.setup.js',
+    '<rootDir>/__tests__/__mocks__/'
+  ],
+  collectCoverageFrom: ['**/*.{js,jsx,ts,tsx}', '!**/*.d.ts', '!**/node_modules/**'],
+  moduleNameMapper: {
+    /* Handle image imports
+    https://jestjs.io/docs/webpack#handling-static-assets */
+    '^.+\\.(jpg|jpeg|png|gif|webp|avif|svg)$': '<rootDir>/__tests__/__mocks__/fileMock.js'
+  }
 }
 
 // createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async

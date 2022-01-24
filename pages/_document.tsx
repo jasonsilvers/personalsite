@@ -2,34 +2,18 @@ import type { DocumentContext } from 'next/document'
 import Document from 'next/document'
 import * as React from 'react'
 
-import type { Configuration } from 'twind/server'
 import { setup, asyncVirtualSheet, hash, getStyleTagProperties } from 'twind/server'
-import twindConfig from '../twind.config'
+import { twindConfig } from '../utils/twind.config'
 
 export type Constructor<T = object, S = object> = (new (...input: any[]) => T) & S
 
 function withTwindDocument<
   P = {},
   Base extends Constructor<Document<P>, typeof Document> = typeof Document
->(config?: Configuration, BaseDocument?: Base): Base
-
-function withTwindDocument<
-  P = {},
-  Base extends Constructor<Document<P>, typeof Document> = typeof Document
->(BaseDocument?: Base): Base
-
-function withTwindDocument<
-  P = {},
-  Base extends Constructor<Document<P>, typeof Document> = typeof Document
->(configOrBase?: Configuration | Base, BaseDocument?: Base): Base {
-  if (typeof configOrBase == 'function') {
-    BaseDocument = configOrBase
-    configOrBase = {}
-  }
-
+>(BaseDocument?: Base): Base {
   const sheet = asyncVirtualSheet()
 
-  setup({ ...configOrBase, sheet })
+  setup({ ...twindConfig, sheet })
 
   // @ts-ignore
   return class extends (BaseDocument || Document) {
@@ -70,4 +54,4 @@ class MyDocument extends Document {
   }
 }
 
-export default withTwindDocument(twindConfig, MyDocument)
+export default withTwindDocument(MyDocument)
