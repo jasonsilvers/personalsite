@@ -58,8 +58,8 @@ const Home: NextPage = () => {
               <h1 className={tw`text-2xl`}>Hello</h1>
               <p>I’m a web developer.</p>
               <p>
-                Here, I share my experience as a web developer and things I am learning about on
-                React, Typescript, Next.js, Security and Testing
+                Here, I share my experience and things I am learning about on React, Typescript,
+                Next.js, Security and Testing
               </p>
             </div>
             <div className={tw`ml-auto`}>
