@@ -10,6 +10,6 @@ describe('main', () => {
   })
 
   it('should display welcome message', () => {
-    cy.findByText(/jason c. silvers/i).should('exist')
+    cy.findByText(/hello/i).should('exist')
   })
 })

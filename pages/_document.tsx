@@ -1,5 +1,4 @@
-import type { DocumentContext } from 'next/document'
-import Document from 'next/document'
+import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document'
 import * as React from 'react'
 
 import { setup, asyncVirtualSheet, hash, getStyleTagProperties } from 'twind/server'
@@ -43,6 +42,26 @@ function withTwindDocument<
       }
 
       return super.getInitialProps(ctx)
+    }
+
+    render() {
+      return (
+        <Html>
+          <Head>
+            <link rel="preconnect" href="https://fonts.googleapis.com" />
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="crossorigin" />
+            <link
+              href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;400&display=swap"
+              rel="stylesheet"
+              crossOrigin="crossorigin"
+            />
+          </Head>
+          <body>
+            <Main />
+            <NextScript />
+          </body>
+        </Html>
+      )
     }
   }
 }
