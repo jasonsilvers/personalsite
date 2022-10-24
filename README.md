@@ -1,1 +1,1 @@
-My Personal Blog built with Next.js and MDX
+My Personal Blog built with Next.js
