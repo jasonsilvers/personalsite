@@ -3,85 +3,27 @@
 exports[`routes the user to the Unauthenticated app 1`] = `
 <div>
   <div>
-    <header
-      class="border-1 py-6"
+    <section
+      class="h-[300px] bg-[#F8FAFB] p-8 rounded-2xl flex flex-row"
     >
       <div
-        class="tw-1tz6xsh"
+        class="flex flex-col gap-y-6 font-thin"
       >
-        <nav
-          class="flex flex-row gap-x-3"
+        <h1
+          class="text-3xl"
         >
-          <h1
-            class="text-2xl pr-10 font-thin"
-          >
-            Jason C. Silvers
-          </h1>
-          <div
-            class="ml-auto flex flex-row gap-x-2"
-          >
-            <a
-              class="h-[32px]"
-              href="https://www.linkedin.com/in/jasonsilvers"
-              title="Link to linkedin profile"
-            >
-              Next image stub
-            </a>
-            <a
-              class="h-[32px]"
-              href="https://www.linkedin.com/in/jasonsilvers"
-              title="Link to linkedin profile"
-            >
-              Next image stub
-            </a>
-            <a
-              class="h-[32px]"
-              href="https://www.strava.com/athletes/297175/training/log"
-              title="Link to Strava profile"
-            >
-              Next image stub
-            </a>
-            <a
-              class="h-[32px]"
-              href="https://github.com/jasonsilvers"
-              title="Link to github profile"
-            >
-              Next image stub
-            </a>
-          </div>
-        </nav>
+          Hello
+        </h1>
+        <p>
+          I’m a web developer.
+        </p>
       </div>
-    </header>
-    <main>
       <div
-        class="tw-1tz6xsh pt-6"
+        class="ml-auto"
       >
-        <section
-          class="h-[300px] bg-[#F8FAFB] p-8 rounded-2xl flex flex-row"
-        >
-          <div
-            class="flex flex-col gap-y-6"
-          >
-            <h1
-              class="text-2xl"
-            >
-              Hello
-            </h1>
-            <p>
-              I’m a web developer.
-            </p>
-            <p>
-              Here, I share my experience and what I am learning about on creating testable, flexible, and maintainable software.
-            </p>
-          </div>
-          <div
-            class="ml-auto"
-          >
-            Next image stub
-          </div>
-        </section>
+        Next image stub
       </div>
-    </main>
+    </section>
   </div>
 </div>
 `;
